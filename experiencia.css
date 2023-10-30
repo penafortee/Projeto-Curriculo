@@ -1,0 +1,117 @@
+.experiencia {
+    max-width: 1700px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+}
+
+.experiencia .subtitulo {
+    color: #e0e0e0;
+}
+
+.experiencia-texto {
+    font-size: 1.5rem;
+    line-height: 1.33;
+    max-width: 40ch;
+    margin-bottom: 60px;
+    color: #525252;
+}
+
+.experiencia-texto strong {
+    color: #141414;
+}
+
+.empresa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+    background-color: #ebc7db;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.empresa::before {
+    content: "";
+    display: block;
+    background: linear-gradient(#cd64b3, #a12290);
+    width: 4px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 1px;
+}
+
+.empresa-ano {
+    position: absolute;
+    left: -100px;
+    top: 22px;
+    text-align: right;
+    width: 80px;
+    color: #525252;
+    font-size: 1rem;
+}
+
+.empresa-titulo {
+    font-size: 1.125rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.empresa-texto {
+    font-size: 0.87rem;
+    line-height: 1.4;
+    color: #525252;
+}
+
+.empresa-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: start;
+}
+
+.empresa-habilidades li {
+    font-size: 20px;
+    line-height: 1.4;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 5px 10px;
+}
+
+@media (max-width: 800px) {
+    .experiencia {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .experiencia-subtitulo {
+        color: #141414;
+    }
+    .experiencia-texto {
+        font-size: 1.25rem;
+    }
+    .empresa-ano {
+        position: initial;
+        order: 1;
+        width: initial;
+        text-align: left;
+    }
+    .empresa-ano::before {
+        content: "Ano: ";
+    }
+    .empresa-habilidades {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .empresa {
+        grid-template-columns: 1fr;
+    }
+    .empresa-habilidades {
+        font-size: 10px;
+    }
+}
